@@ -107,5 +107,4 @@ jobs:
           args: |
             ${{ env.BUILD_ARGS }} \
             --${{ matrix.arch }} \
-            --target /data/${{ matrix.addon }} \
-            --docker-hub homeassistant
+            --target /data/${{ matrix.addon }}
