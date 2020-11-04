@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       lsb-release \
       curl \
       gnupg \
+      build-essential \
       git \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
@@ -14,7 +15,7 @@ RUN export DISTRO=$(lsb_release -c -s) \
     && echo "deb https://deb.nodesource.com/node_8.x ${DISTRO} main" > /etc/apt/sources.list.d/nodesource.list \
     && echo "deb-src https://deb.nodesource.com/node_8.x ${DISTRO} main" >> /etc/apt/sources.list.d/nodesource.list \
     && apt-get update && apt-get install -y --no-install-recommends \
-      nodejs \
+      nodejs=8.\* \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ENV HOME=/root
