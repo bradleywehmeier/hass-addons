@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       curl \
       gnupg \
       build-essential \
+      python \
       git \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 

@@ -1,6 +1,6 @@
 {
   "build_from": {
-    "armhf":   "homeassistant/armhf-base-debian",
+    "armhf":   "homeassistant/armhf-base-raspbian",
     "armv7":   "homeassistant/armv7-base-debian",
     "aarch64": "homeassistant/aarch64-base-debian",
     "amd64":   "homeassistant/amd64-base-debian",
