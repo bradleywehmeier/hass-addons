@@ -36,6 +36,9 @@ RUN cd /root && \
 # Installation Prep
     curl -L https://yarnpkg.com/latest.tar.gz | tar xvz && mv yarn-v* $HOME/.yarn && \
     apt-get update && apt-get install -y --no-install-recommends apt-utils \ 
+     cmake \
+     yasm \
+#     libvips-dev \ # Omitting libvips since the dependencies are huge
      libudev-dev \
      libgusb-dev && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
