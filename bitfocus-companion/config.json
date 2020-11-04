@@ -1,0 +1,17 @@
+{
+  "name": "Bitfocus Companion",
+  "version": "1.0.5",
+  "slug": "bitfocus-companion",
+  "description": "Bitfocus Companion on Home Assistant!",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "application",
+  "boot": "auto",
+  "options": {},
+  "schema": {},
+  "host_network": true,
+  "environment": {
+    "COMPANION_CONFIG_BASEDIR": "/data"
+  },
+  "usb": true,
+  "image": "bradleywehmeier/{arch}-hass-bitfocus-companion"
+}
