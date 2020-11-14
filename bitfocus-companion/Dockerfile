@@ -27,9 +27,11 @@ ENV ELECTRON_CACHE=$HOME/.cache/electron
 ENV ELECTRON_BUILDER_CACHE=$HOME/.cache/electron-builder
 ENV PATH="$HOME/.yarn/bin:$PATH"
 
+ARG COMPANION_VERSION_TAG
+
 # Clone repository and set as workdir 
 RUN cd /root && \
-    git clone https://github.com/bitfocus/companion.git && \
+    git clone --depth 1 --branch "${COMPANION_VERSION_TAG}" https://github.com/bitfocus/companion.git && \
     mv companion/.[!.]* . && \
     mv companion/* . && \
     rm -rf companion && \

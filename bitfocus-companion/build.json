@@ -5,5 +5,8 @@
     "aarch64": "homeassistant/aarch64-base-debian",
     "amd64":   "homeassistant/amd64-base-debian",
     "i386":    "homeassistant/i386-base-debian"
+  },
+  "args": {
+    "COMPANION_VERSION_TAG": "master"
   }
 }

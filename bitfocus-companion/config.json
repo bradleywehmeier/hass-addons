@@ -1,6 +1,6 @@
 {
   "name": "Bitfocus Companion",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "slug": "bitfocus-companion",
   "description": "Bitfocus Companion on Home Assistant!",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
