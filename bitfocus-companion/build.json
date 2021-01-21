@@ -7,6 +7,6 @@
     "i386":    "homeassistant/i386-base-debian"
   },
   "args": {
-    "COMPANION_VERSION_TAG": "master"
+    "COMPANION_VERSION_TAG": "v2.1.2"
   }
 }
