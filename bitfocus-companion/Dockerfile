@@ -15,10 +15,10 @@ ARG NODEJS_VERSION
 
 RUN export DISTRO=$(lsb_release -c -s) \
     && curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - \
-    && echo "deb https://deb.nodesource.com/${NODEJS_VERSION} ${DISTRO} main" > /etc/apt/sources.list.d/nodesource.list \
-    && echo "deb-src https://deb.nodesource.com/${NODEJS_VERSION} ${DISTRO} main" >> /etc/apt/sources.list.d/nodesource.list \
+    && echo "deb https://deb.nodesource.com/node_${NODEJS_VERSION}.x ${DISTRO} main" > /etc/apt/sources.list.d/nodesource.list \
+    && echo "deb-src https://deb.nodesource.com/node_${NODEJS_VERSION}.x ${DISTRO} main" >> /etc/apt/sources.list.d/nodesource.list \
     && apt-get update && apt-get install -y --no-install-recommends \
-      nodejs \
+      nodejs=${NODEJS_VERSION}.\* \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ENV HOME=/root
