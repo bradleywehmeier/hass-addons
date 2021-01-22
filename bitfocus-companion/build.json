@@ -7,6 +7,7 @@
     "i386":    "homeassistant/i386-base-debian"
   },
   "args": {
+    "NODEJS_VERSION": "node_12.x",
     "COMPANION_VERSION_TAG": "v2.1.2"
   }
 }
